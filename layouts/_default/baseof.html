@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="{{ or site.Language.LanguageCode site.Language.Lang }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ block "title" . }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
+  
+  {{ with (templates.Defer (dict "key" "global_css")) }}
+    {{ partial "css.html" . }}
+  {{ end }}
+  
+</head>
+<body>
+  {{ block "main" . }}{{ end }}
+</body>
+</html>

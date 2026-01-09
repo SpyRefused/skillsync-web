@@ -1,0 +1,27 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+
+[build]
+  [build.buildStats]
+    enable = true # Obligatorio: genera el mapa de clases usadas
+
+  # Esto evita que Hugo se reinicie en bucle infinito al cambiar el CSS
+  [[build.cachebusters]]
+    source = 'assets/notwatching/hugo_stats\.json'
+    target = 'css'
+  [[build.cachebusters]]
+    source = '(postcss|tailwind)\.config\.js'
+    target = 'css'
+
+[module]
+  # Montamos la carpeta assets
+  [[module.mounts]]
+    source = 'assets'
+    target = 'assets'
+  
+  # Truco importante: Montamos el hugo_stats generado en una carpeta "segura"
+  [[module.mounts]]
+    disableWatch = true
+    source = 'hugo_stats.json'
+    target = 'assets/notwatching/hugo_stats.json'

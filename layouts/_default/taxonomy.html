@@ -1,0 +1,21 @@
+{{ define "title" }}{{ .Title }} | {{ site.Title }}{{ end }}
+
+{{ define "main" }}
+<main class="mx-auto max-w-3xl p-6">
+  <h1 class="text-3xl font-bold">{{ .Title }}</h1>
+
+  {{ $terms := .Pages }}
+  {{ if gt (len $terms) 0 }}
+    <ul class="mt-6 space-y-2">
+      {{ range $terms }}
+        <li>
+          <a class="underline" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+          <span class="opacity-70">({{ len .Pages }})</span>
+        </li>
+      {{ end }}
+    </ul>
+  {{ else }}
+    <p class="mt-6">No hay términos todavía.</p>
+  {{ end }}
+</main>
+{{ end }}

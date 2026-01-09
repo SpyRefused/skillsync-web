@@ -1,0 +1,20 @@
+{{ define "title" }}{{ .Title }} | {{ site.Title }}{{ end }}
+
+{{ define "main" }}
+<main class="mx-auto max-w-3xl p-6">
+  <h1 class="text-3xl font-bold">{{ .Title }}</h1>
+
+  {{ $pages := .Pages }}
+  {{ if gt (len $pages) 0 }}
+    <ul class="mt-6 space-y-2">
+      {{ range $pages }}
+        <li>
+          <a class="underline" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+        </li>
+      {{ end }}
+    </ul>
+  {{ else }}
+    <p class="mt-6">No hay páginas para este término.</p>
+  {{ end }}
+</main>
+{{ end }}

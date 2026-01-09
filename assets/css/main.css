@@ -1,0 +1,12 @@
+/* assets/css/main.css */
+
+/* Importamos el núcleo de Tailwind */
+@import "tailwindcss";
+
+/* Le decimos a Tailwind dónde buscar las clases para purgar el CSS */
+@source "hugo_stats.json";
+
+/* Aquí puedes añadir tus estilos personalizados si quieres */
+@theme {
+  --color-primary: #3b82f6; /* Ejemplo de configuración de tema v4/v5 */
+}
