@@ -1,24 +1,29 @@
 {{ define "title" }}{{ site.Title }}{{ end }}
 
 {{ define "main" }}
-<main class="mx-auto max-w-3xl p-6">
-  <h1 class="text-3xl font-bold">{{ site.Title }}</h1>
+<main class="container-main py-14">
+  <div class="max-w-3xl">
+    <h1 class="text-4xl font-semibold tracking-tight text-stone-950">{{ site.Title }}</h1>
 
-  {{ with site.Params.description }}
-    <p class="mt-2 text-lg">{{ . }}</p>
-  {{ end }}
+    {{ with site.Params.description }}
+      <p class="mt-4 text-lg text-stone-700">{{ . }}</p>
+    {{ end }}
 
-  {{ $pages := site.RegularPages }}
-  {{ if gt (len $pages) 0 }}
-    <ul class="mt-6 space-y-2">
-      {{ range first 20 $pages }}
-        <li>
-          <a class="underline" href="{{ .RelPermalink }}">{{ .Title }}</a>
-        </li>
-      {{ end }}
-    </ul>
-  {{ else }}
-    <p class="mt-6">No hay contenido todavía. Crea un archivo en <code>content/</code>.</p>
-  {{ end }}
+    {{ $pages := site.RegularPages }}
+    {{ if gt (len $pages) 0 }}
+      <ul class="mt-10 space-y-6">
+        {{ range first 20 $pages }}
+          <li>
+            <a class="text-lg font-medium no-underline hover:underline" href="{{ .RelPermalink }}">{{ .Title }}</a>
+            {{ with .Summary }}
+              <p class="mt-2 text-sm leading-relaxed text-stone-700">{{ . }}</p>
+            {{ end }}
+          </li>
+        {{ end }}
+      </ul>
+    {{ else }}
+      <p class="mt-10 text-stone-700">No hay contenido todavía. Crea un archivo en <code>content/</code>.</p>
+    {{ end }}
+  </div>
 </main>
 {{ end }}

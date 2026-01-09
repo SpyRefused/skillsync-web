@@ -8,5 +8,71 @@
 
 /* Aquí puedes añadir tus estilos personalizados si quieres */
 @theme {
-  --color-primary: #3b82f6; /* Ejemplo de configuración de tema v4/v5 */
+  /* Mantén tokens aquí si quieres mapear a utilidades o CSS vars. */
+}
+
+@layer base {
+  html {
+    @apply bg-amber-50 text-stone-950 antialiased;
+  }
+
+  body {
+    @apply min-h-screen;
+  }
+
+  a {
+    text-decoration-thickness: 0.06em;
+    text-underline-offset: 0.18em;
+    @apply decoration-stone-500/60 hover:decoration-stone-800/70;
+  }
+
+  code {
+    @apply rounded bg-stone-100 px-1 py-0.5 text-[0.9em];
+  }
+
+  ::selection {
+    @apply bg-orange-200/70;
+  }
+}
+
+@layer components {
+  .container-main {
+    @apply mx-auto w-full max-w-6xl px-6;
+  }
+
+  .content {
+    @apply text-[1.05rem] leading-relaxed text-stone-800;
+  }
+
+  .content > * + * {
+    @apply mt-6;
+  }
+
+  .content h2 {
+    @apply mt-10 text-2xl font-semibold tracking-tight text-stone-950;
+  }
+
+  .content h3 {
+    @apply mt-8 text-xl font-semibold tracking-tight text-stone-950;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-medium no-underline;
+  }
+
+  .btn-primary {
+    @apply bg-stone-950 text-amber-50 hover:bg-stone-900;
+  }
+
+  .btn-secondary {
+    @apply border border-stone-300 bg-transparent text-stone-950 hover:border-stone-400;
+  }
+
+  .content ul {
+    @apply list-disc pl-6;
+  }
+
+  .content ol {
+    @apply list-decimal pl-6;
+  }
 }

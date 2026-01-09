@@ -10,7 +10,31 @@
   {{ end }}
   
 </head>
-<body>
+<body class="min-h-screen">
+  <header class="pt-8">
+    <div class="container-main flex items-center justify-between">
+      <a class="text-sm font-medium tracking-wide no-underline" href="{{ site.Home.RelPermalink }}">{{ site.Title }}</a>
+
+      <nav class="flex items-center gap-5 text-sm text-stone-700">
+        {{ with site.GetPage "/news" }}
+          <a class="no-underline hover:underline" href="{{ .RelPermalink }}">News</a>
+        {{ end }}
+        {{ with site.GetPage "/about" }}
+          <a class="no-underline hover:underline" href="{{ .RelPermalink }}">About</a>
+        {{ end }}
+        {{ with site.GetPage "/tags" }}
+          <a class="no-underline hover:underline" href="{{ .RelPermalink }}">Tags</a>
+        {{ end }}
+      </nav>
+    </div>
+  </header>
+
   {{ block "main" . }}{{ end }}
+
+  <footer class="mt-20 pb-10">
+    <div class="container-main text-sm text-stone-600">
+      <p>&copy; {{ now.Format "2006" }} {{ site.Title }}</p>
+    </div>
+  </footer>
 </body>
 </html>
