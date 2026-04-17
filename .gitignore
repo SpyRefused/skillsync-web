@@ -1,8 +1,5 @@
 # --- Hugo ---
-/public/
-/resources/
 /.hugo_build.lock
-/hugo_stats.json
 
 # --- Node / Tailwind toolchain ---
 /node_modules/

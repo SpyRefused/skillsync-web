@@ -1,0 +1,253 @@
+{{ define "title" }}{{ .Title }}{{ end }}
+
+{{ define "main" }}
+<div class="relative">
+  <!-- Hero Section -->
+  <section class="py-16 md:py-24">
+    <div class="container-main">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-5xl md:text-6xl font-bold tracking-tight mb-6" style="color: var(--color-anthropic-dark);">
+          Powerful Features for Modern HR Teams
+        </h1>
+        <p class="text-xl leading-relaxed" style="color: var(--color-anthropic-gray-medium);">
+          SkillSync combines cutting-edge AI with proven learning science to deliver IDPs that actually drive employee growth.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RAG Technology Section -->
+  <section class="py-16 md:py-24">
+    <div class="container-main">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="inline-block px-4 py-2 rounded-full mb-6" style="background-color: rgba(217, 119, 87, 0.1);">
+            <span class="text-sm font-semibold uppercase tracking-wide" style="color: var(--color-anthropic-coral);">RAG Technology</span>
+          </div>
+          <h2 class="text-4xl font-bold tracking-tight mb-6" style="color: var(--color-anthropic-dark);">
+            AI That Learns From Your Company
+          </h2>
+          <p class="text-lg leading-relaxed mb-6" style="color: var(--color-anthropic-gray-medium);">
+            Powered by <strong>Retrieval-Augmented Generation (RAG)</strong>, SkillSync doesn't just generate generic plans. It learns from your internal knowledge base to create development plans that align with your company's specific needs.
+          </p>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full flex items-center justify-center mt-1 flex-shrink-0" style="background-color: var(--color-anthropic-coral);">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold mb-1" style="color: var(--color-anthropic-dark);">Upload Company Manuals</h3>
+                <p style="color: var(--color-anthropic-gray-medium);">Feed SkillSync your HR policies, competency frameworks, and internal training materials.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full flex items-center justify-center mt-1 flex-shrink-0" style="background-color: var(--color-anthropic-coral);">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold mb-1" style="color: var(--color-anthropic-dark);">Connect Course Catalogs</h3>
+                <p style="color: var(--color-anthropic-gray-medium);">Integrate with your LMS, Udemy Business, or custom course library.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full flex items-center justify-center mt-1 flex-shrink-0" style="background-color: var(--color-anthropic-coral);">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold mb-1" style="color: var(--color-anthropic-dark);">Contextual Recommendations</h3>
+                <p style="color: var(--color-anthropic-gray-medium);">Get tailored suggestions based on role, department, and career trajectory.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="rounded-2xl p-8 lg:p-12" style="background: linear-gradient(135deg, rgba(217, 119, 87, 0.1) 0%, rgba(217, 119, 87, 0.05) 100%); border: 1px solid rgba(217, 119, 87, 0.2);">
+          <div class="space-y-4">
+            <div class="p-4 rounded-lg" style="background-color: var(--color-anthropic-cream); border: 1px solid rgba(0,0,0,0.05);">
+              <p class="text-sm font-mono" style="color: var(--color-anthropic-gray-medium);">Company Knowledge Base</p>
+              <p class="text-xs mt-2" style="color: var(--color-anthropic-gray-light);">📄 Engineering_Competencies.pdf</p>
+              <p class="text-xs" style="color: var(--color-anthropic-gray-light);">📄 Leadership_Framework.pdf</p>
+              <p class="text-xs" style="color: var(--color-anthropic-gray-light);">📄 Course_Catalog_2024.csv</p>
+            </div>
+            <div class="flex items-center justify-center py-3">
+              <svg class="w-6 h-6" style="color: var(--color-anthropic-coral);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+              </svg>
+            </div>
+            <div class="p-4 rounded-lg" style="background-color: var(--color-anthropic-cream); border: 1px solid rgba(0,0,0,0.05);">
+              <p class="text-sm font-semibold mb-2" style="color: var(--color-anthropic-dark);">Generated IDP</p>
+              <p class="text-xs leading-relaxed" style="color: var(--color-anthropic-gray-medium);">
+                "Based on Sarah's role as Senior Developer and her goal to become a Tech Lead, we recommend: <strong>70% hands-on project leadership</strong>, mentorship from John (CTO), and the Advanced Architecture course from your catalog."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RAG Flow Diagram Section -->
+  <section class="py-16 md:py-24">
+    <div class="container-main">
+      <div class="max-w-6xl mx-auto">
+        {{ partial "rag-flow-diagram.html" . }}
+        <div class="text-center mt-8">
+          <p class="text-sm" style="color: var(--color-anthropic-gray-medium);">
+            <strong>Visual representation:</strong> How SkillSync combines your company data, employee profiles, and course catalogs to create personalized IDPs
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Privacy & Security Section -->
+  <section class="py-16 md:py-24" style="background-color: rgba(19, 19, 20, 0.03);">
+    <div class="container-main">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+          <div class="inline-block px-4 py-2 rounded-full mb-4" style="background-color: rgba(217, 119, 87, 0.1);">
+            <span class="text-sm font-semibold uppercase tracking-wide" style="color: var(--color-anthropic-coral);">Privacy & Security</span>
+          </div>
+          <h2 class="text-4xl font-bold tracking-tight mb-4" style="color: var(--color-anthropic-dark);">
+            Your Data, Your Control
+          </h2>
+          <p class="text-lg max-w-2xl mx-auto" style="color: var(--color-anthropic-gray-medium);">
+            We take privacy seriously. SkillSync is built from the ground up with enterprise-grade security and GDPR compliance.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="p-6 rounded-xl" style="background-color: var(--color-anthropic-cream); border: 1px solid rgba(0,0,0,0.05);">
+            <div class="w-10 h-10 rounded-lg mb-4 flex items-center justify-center" style="background-color: rgba(217, 119, 87, 0.1);">
+              <svg class="w-5 h-5" style="color: var(--color-anthropic-coral);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2" style="color: var(--color-anthropic-dark);">GDPR Compliant</h3>
+            <p style="color: var(--color-anthropic-gray-medium);">Full compliance with EU data protection regulations. Right to access, rectify, and delete data at any time.</p>
+          </div>
+
+          <div class="p-6 rounded-xl" style="background-color: var(--color-anthropic-cream); border: 1px solid rgba(0,0,0,0.05);">
+            <div class="w-10 h-10 rounded-lg mb-4 flex items-center justify-center" style="background-color: rgba(217, 119, 87, 0.1);">
+              <svg class="w-5 h-5" style="color: var(--color-anthropic-coral);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2" style="color: var(--color-anthropic-dark);">End-to-End Encryption</h3>
+            <p style="color: var(--color-anthropic-gray-medium);">All employee data is encrypted in transit and at rest using AES-256 encryption standards.</p>
+          </div>
+
+          <div class="p-6 rounded-xl" style="background-color: var(--color-anthropic-cream); border: 1px solid rgba(0,0,0,0.05);">
+            <div class="w-10 h-10 rounded-lg mb-4 flex items-center justify-center" style="background-color: rgba(217, 119, 87, 0.1);">
+              <svg class="w-5 h-5" style="color: var(--color-anthropic-coral);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2" style="color: var(--color-anthropic-dark);">Role-Based Access</h3>
+            <p style="color: var(--color-anthropic-gray-medium);">Granular permissions ensure only authorized HR personnel can access sensitive employee information.</p>
+          </div>
+
+          <div class="p-6 rounded-xl" style="background-color: var(--color-anthropic-cream); border: 1px solid rgba(0,0,0,0.05);">
+            <div class="w-10 h-10 rounded-lg mb-4 flex items-center justify-center" style="background-color: rgba(217, 119, 87, 0.1);">
+              <svg class="w-5 h-5" style="color: var(--color-anthropic-coral);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2" style="color: var(--color-anthropic-dark);">Audit Logs</h3>
+            <p style="color: var(--color-anthropic-gray-medium);">Complete activity tracking for compliance reporting and security monitoring.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Analytics Dashboard Section -->
+  <section class="py-16 md:py-24">
+    <div class="container-main">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="order-2 lg:order-1">
+          <div class="rounded-2xl p-8" style="background: linear-gradient(135deg, rgba(217, 119, 87, 0.05) 0%, rgba(217, 119, 87, 0.02) 100%); border: 1px solid rgba(217, 119, 87, 0.15);">
+            <div class="mb-6">
+              <p class="text-sm font-semibold mb-2" style="color: var(--color-anthropic-gray-medium);">IDP Completion Rate</p>
+              <div class="w-full h-3 rounded-full" style="background-color: rgba(0,0,0,0.1);">
+                <div class="h-3 rounded-full" style="width: 78%; background-color: var(--color-anthropic-coral);"></div>
+              </div>
+              <p class="text-3xl font-bold mt-2" style="color: var(--color-anthropic-dark);">78%</p>
+            </div>
+            <div class="grid grid-cols-2 gap-4 mt-8">
+              <div class="p-4 rounded-lg" style="background-color: var(--color-anthropic-cream);">
+                <p class="text-xs uppercase tracking-wide mb-1" style="color: var(--color-anthropic-gray-light);">Active IDPs</p>
+                <p class="text-2xl font-bold" style="color: var(--color-anthropic-dark);">142</p>
+              </div>
+              <div class="p-4 rounded-lg" style="background-color: var(--color-anthropic-cream);">
+                <p class="text-xs uppercase tracking-wide mb-1" style="color: var(--color-anthropic-gray-light);">Avg Time Saved</p>
+                <p class="text-2xl font-bold" style="color: var(--color-anthropic-dark);">12h</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="order-1 lg:order-2">
+          <div class="inline-block px-4 py-2 rounded-full mb-6" style="background-color: rgba(217, 119, 87, 0.1);">
+            <span class="text-sm font-semibold uppercase tracking-wide" style="color: var(--color-anthropic-coral);">Analytics Dashboard</span>
+          </div>
+          <h2 class="text-4xl font-bold tracking-tight mb-6" style="color: var(--color-anthropic-dark);">
+            Track What Matters
+          </h2>
+          <p class="text-lg leading-relaxed mb-6" style="color: var(--color-anthropic-gray-medium);">
+            Get real-time insights into your employee development programs. The SkillSync dashboard gives HR managers visibility into completion rates, skill gaps, and ROI.
+          </p>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 flex-shrink-0" style="color: var(--color-anthropic-coral);" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span style="color: var(--color-anthropic-gray-medium);">Monitor IDP completion across departments</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 flex-shrink-0" style="color: var(--color-anthropic-coral);" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span style="color: var(--color-anthropic-gray-medium);">Identify skill gaps before they become problems</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 flex-shrink-0" style="color: var(--color-anthropic-coral);" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span style="color: var(--color-anthropic-gray-medium);">Export reports for leadership presentations</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-5 h-5 flex-shrink-0" style="color: var(--color-anthropic-coral);" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span style="color: var(--color-anthropic-gray-medium);">Measure time-to-competency improvements</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20" style="background-color: rgba(217, 119, 87, 0.03);">
+    <div class="container-main">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-4xl font-bold tracking-tight mb-6" style="color: var(--color-anthropic-dark);">
+          See SkillSync in Action
+        </h2>
+        <p class="text-xl mb-8" style="color: var(--color-anthropic-gray-medium);">
+          Schedule a personalized demo and discover how AI can transform your HR workflow.
+        </p>
+        <a href="/contact" class="btn btn-primary text-lg px-10 py-4 inline-block">
+          Book a Demo
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+{{ end }}

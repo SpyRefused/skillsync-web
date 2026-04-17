@@ -4,7 +4,7 @@
 <main class="container-main py-14">
   <div class="max-w-3xl">
     <header class="mb-10">
-      <h1 class="text-4xl font-semibold tracking-tight text-stone-950">{{ .Title }}</h1>
+      <h1 class="text-4xl font-semibold tracking-tight" style="color: var(--color-anthropic-dark);">{{ .Title }}</h1>
     </header>
 
     {{ with .Content }}
@@ -18,15 +18,15 @@
       <ul class="mt-10 space-y-6">
         {{ range $pages }}
           <li>
-            <a class="text-lg font-medium no-underline hover:underline" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+            <a class="text-lg font-medium no-underline hover:underline transition-colors" style="color: var(--color-anthropic-dark);" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
             {{ with .Summary }}
-              <p class="mt-2 text-sm leading-relaxed text-stone-700">{{ . }}</p>
+              <p class="mt-2 text-sm leading-relaxed" style="color: var(--color-anthropic-gray-medium);">{{ . }}</p>
             {{ end }}
           </li>
         {{ end }}
       </ul>
     {{ else }}
-      <p class="mt-10 text-stone-700">No hay páginas todavía.</p>
+      <p class="mt-10" style="color: var(--color-anthropic-gray-medium);">No hay páginas todavía.</p>
     {{ end }}
   </div>
 </main>

@@ -1,0 +1,11 @@
+{{- $level := .Level -}}
+{{- $id := .Anchor -}}
+
+<h{{ $level }}{{ with $id }} id="{{ . }}"{{ end }} class="
+  {{- if eq $level 1 -}}mt-10 text-4xl font-semibold tracking-tight leading-tight text-stone-950
+  {{- else if eq $level 2 -}}mt-10 text-2xl font-semibold tracking-tight leading-tight text-stone-950
+  {{- else if eq $level 3 -}}mt-8 text-xl font-semibold tracking-tight leading-tight text-stone-950
+  {{- else -}}mt-6 text-lg font-semibold tracking-tight leading-tight text-stone-950
+  {{- end -}}">
+  {{- .Text | safeHTML -}}
+</h{{ $level }}>

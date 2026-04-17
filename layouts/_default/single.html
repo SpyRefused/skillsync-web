@@ -4,9 +4,9 @@
 <main class="container-main py-14">
   <article class="max-w-3xl">
     <header class="mb-10">
-      <h1 class="text-4xl font-semibold tracking-tight text-stone-950">{{ .Title }}</h1>
+      <h1 class="text-4xl font-semibold tracking-tight" style="color: var(--color-anthropic-dark);">{{ .Title }}</h1>
       {{ with .Date }}
-        <p class="mt-3 text-sm text-stone-600">{{ .Format "January 2, 2006" }}</p>
+        <p class="mt-3 text-sm" style="color: var(--color-anthropic-gray-light);">{{ .Format "January 2, 2006" }}</p>
       {{ end }}
     </header>
 

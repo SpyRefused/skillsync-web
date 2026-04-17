@@ -1,0 +1,98 @@
+<!-- Animated Metrics Chart SVG -->
+<div class="metrics-chart-container">
+  <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto">
+    <defs>
+      <linearGradient id="barGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" style="stop-color:#d97757;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#c26645;stop-opacity:1" />
+      </linearGradient>
+      <filter id="shadow">
+        <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.15"/>
+      </filter>
+    </defs>
+
+    <!-- Grid lines -->
+    <g stroke="rgba(0,0,0,0.05)" stroke-width="1">
+      <line x1="50" y1="50" x2="550" y2="50"/>
+      <line x1="50" y1="125" x2="550" y2="125"/>
+      <line x1="50" y1="200" x2="550" y2="200"/>
+      <line x1="50" y1="275" x2="550" y2="275"/>
+      <line x1="50" y1="350" x2="550" y2="350"/>
+    </g>
+
+    <!-- Y-axis labels -->
+    <text x="30" y="55" font-size="12" fill="#9ca3af" text-anchor="end">100%</text>
+    <text x="30" y="130" font-size="12" fill="#9ca3af" text-anchor="end">75%</text>
+    <text x="30" y="205" font-size="12" fill="#9ca3af" text-anchor="end">50%</text>
+    <text x="30" y="280" font-size="12" fill="#9ca3af" text-anchor="end">25%</text>
+    <text x="30" y="355" font-size="12" fill="#9ca3af" text-anchor="end">0%</text>
+
+    <!-- Animated Bars -->
+    <g class="bars">
+      <!-- Bar 1: Time Saved -->
+      <rect x="100" y="50" width="60" height="0" fill="url(#barGradient)" filter="url(#shadow)" rx="4">
+        <animate attributeName="height" from="0" to="240" dur="1.5s" fill="freeze" begin="0.2s"/>
+        <animate attributeName="y" from="350" to="110" dur="1.5s" fill="freeze" begin="0.2s"/>
+      </rect>
+      <text x="130" y="370" font-size="13" fill="#131314" text-anchor="middle" font-weight="600">Time</text>
+      <text x="130" y="385" font-size="11" fill="#6b6b6b" text-anchor="middle">Saved</text>
+      <text x="130" y="100" font-size="16" fill="#d97757" text-anchor="middle" font-weight="700" opacity="0">
+        80%
+        <animate attributeName="opacity" from="0" to="1" dur="0.5s" fill="freeze" begin="1.7s"/>
+      </text>
+
+      <!-- Bar 2: Completion Rate -->
+      <rect x="220" y="75" width="60" height="0" fill="url(#barGradient)" filter="url(#shadow)" rx="4">
+        <animate attributeName="height" from="0" to="216" dur="1.5s" fill="freeze" begin="0.4s"/>
+        <animate attributeName="y" from="350" to="134" dur="1.5s" fill="freeze" begin="0.4s"/>
+      </rect>
+      <text x="250" y="370" font-size="13" fill="#131314" text-anchor="middle" font-weight="600">IDP</text>
+      <text x="250" y="385" font-size="11" fill="#6b6b6b" text-anchor="middle">Completion</text>
+      <text x="250" y="124" font-size="16" fill="#d97757" text-anchor="middle" font-weight="700" opacity="0">
+        72%
+        <animate attributeName="opacity" from="0" to="1" dur="0.5s" fill="freeze" begin="1.9s"/>
+      </text>
+
+      <!-- Bar 3: Employee Satisfaction -->
+      <rect x="340" y="25" width="60" height="0" fill="url(#barGradient)" filter="url(#shadow)" rx="4">
+        <animate attributeName="height" from="0" to="264" dur="1.5s" fill="freeze" begin="0.6s"/>
+        <animate attributeName="y" from="350" to="86" dur="1.5s" fill="freeze" begin="0.6s"/>
+      </rect>
+      <text x="370" y="370" font-size="13" fill="#131314" text-anchor="middle" font-weight="600">Employee</text>
+      <text x="370" y="385" font-size="11" fill="#6b6b6b" text-anchor="middle">Satisfaction</text>
+      <text x="370" y="76" font-size="16" fill="#d97757" text-anchor="middle" font-weight="700" opacity="0">
+        88%
+        <animate attributeName="opacity" from="0" to="1" dur="0.5s" fill="freeze" begin="2.1s"/>
+      </text>
+
+      <!-- Bar 4: Retention -->
+      <rect x="460" y="100" width="60" height="0" fill="url(#barGradient)" filter="url(#shadow)" rx="4">
+        <animate attributeName="height" from="0" to="192" dur="1.5s" fill="freeze" begin="0.8s"/>
+        <animate attributeName="y" from="350" to="158" dur="1.5s" fill="freeze" begin="0.8s"/>
+      </rect>
+      <text x="490" y="370" font-size="13" fill="#131314" text-anchor="middle" font-weight="600">Retention</text>
+      <text x="490" y="385" font-size="11" fill="#6b6b6b" text-anchor="middle">Rate</text>
+      <text x="490" y="148" font-size="16" fill="#d97757" text-anchor="middle" font-weight="700" opacity="0">
+        64%
+        <animate attributeName="opacity" from="0" to="1" dur="0.5s" fill="freeze" begin="2.3s"/>
+      </text>
+    </g>
+  </svg>
+</div>
+
+<style>
+.metrics-chart-container {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>

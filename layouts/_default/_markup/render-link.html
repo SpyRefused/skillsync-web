@@ -1,0 +1,4 @@
+{{- $href := .Destination | safeURL -}}
+<a href="{{ $href }}"{{ with .Title }} title="{{ . }}"{{ end }} class="underline decoration-stone-500/60 hover:decoration-stone-800/70">
+  {{- .Text | safeHTML -}}
+</a>
